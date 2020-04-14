@@ -28,9 +28,9 @@ public class BasicHttpMethodsTests {
                 "  \"status\": \"available\"\n" +
                 "}";
 
-        given().body(pet).contentType("application/json")
+        given().log().all().body(pet).contentType("application/json")
                 .when().post("https://swaggerpetstore.przyklady.javastart.pl/v2/pet")
-                .then().statusCode(200);
+                .then().log().all().statusCode(200);
     }
 
 }
