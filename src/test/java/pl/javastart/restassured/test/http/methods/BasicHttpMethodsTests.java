@@ -1,4 +1,4 @@
-package pl.javastart.restassured.test;
+package pl.javastart.restassured.test.http.methods;
 
 import org.testng.annotations.Test;
 
