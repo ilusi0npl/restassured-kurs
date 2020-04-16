@@ -8,7 +8,9 @@ public class SecondRestAssuredAutomatedTest {
 
     @Test
     public void givenExistingPetIdWhenGetPetThenReturnPetTest() {
-        given().when().get("https://swaggerpetstore.przyklady.javastart.pl/v2/pet/1").then().statusCode(200);
+        given().log().method().log().uri()
+                .when().get("https://swaggerpetstore.przyklady.javastart.pl/v2/pet/1")
+                .then().log().all().statusCode(200);
     }
 
 }
