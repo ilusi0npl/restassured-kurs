@@ -5,7 +5,6 @@ import pl.javastart.main.pojo.Category;
 import pl.javastart.main.pojo.Pet;
 import pl.javastart.main.pojo.Tag;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 import static io.restassured.RestAssured.given;
