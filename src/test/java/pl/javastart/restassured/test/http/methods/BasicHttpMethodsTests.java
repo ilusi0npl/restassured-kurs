@@ -94,7 +94,7 @@ public class BasicHttpMethodsTests {
                 .then().log().all().statusCode(200);
 
         given().log().all().contentType("application/json")
-                .pathParam("petId", 445)
+                .pathParam("petId", pet.getId())
                 .when().delete("https://swaggerpetstore.przyklady.javastart.pl/v2/pet/{petId}")
                 .then().log().all().statusCode(200);
     }
