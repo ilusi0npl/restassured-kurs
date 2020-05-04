@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 public class BasicHttpMethodsTests {
 
     @BeforeClass
-    public void setupConfiguration(){
+    public void setupConfiguration() {
         RestAssured.baseURI = "https://swaggerpetstore.przyklady.javastart.pl";
         RestAssured.basePath = "v2";
         RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
@@ -48,8 +48,7 @@ public class BasicHttpMethodsTests {
     @Test
     public void givenExistingPetIdWhenGetPetThenReturnPetTest() {
 
-        given().log().method().log().uri()
-                .pathParam("petId", 1)
+        given().pathParam("petId", 1)
                 .when().get("pet/{petId}")
                 .then().statusCode(200);
     }
