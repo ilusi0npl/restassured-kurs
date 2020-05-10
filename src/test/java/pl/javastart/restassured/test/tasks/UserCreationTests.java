@@ -33,7 +33,7 @@ public class UserCreationTests extends TestBase {
                 .pathParam("username", user.getUsername())
                 .when().get("user/{username}")
                 .then()
-                .assertThat().body("code", equalTo(445))
+                .assertThat().body("id", equalTo(445))
                 .assertThat().body("username", equalTo("firstuser"))
                 .assertThat().body("firstName", equalTo("Krzysztof"))
                 .assertThat().body("lastName", equalTo("Kowalski"))
