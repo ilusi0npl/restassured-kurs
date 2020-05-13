@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.containsString;
 
 public class ParametersTests {
 
@@ -26,7 +26,7 @@ public class ParametersTests {
                                                                    @Optional("Pet not found") String message) {
         given()
                 .when().get("pet/{param}", petId)
-                .then().statusCode(404).assertThat().body("message", equalTo(message));
+                .then().statusCode(404).assertThat().body("message", containsString(message));
     }
 
 }

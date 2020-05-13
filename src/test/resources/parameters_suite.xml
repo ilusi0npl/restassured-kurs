@@ -8,4 +8,20 @@
             <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
         </classes>
     </test>
+
+    <test name="Parametrized Test 2">
+        <parameter name="petId" value="aaa"/>
+        <parameter name="expectedMessage" value="java.lang.NumberFormatException: For input string:"></parameter>
+        <classes>
+            <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
+        </classes>
+    </test>
+
+    <test name="Parametrized Test 3">
+        <parameter name="petId" value="!!!"/>
+        <parameter name="expectedMessage" value="java.lang.NumberFormatException: For input string:"></parameter>
+        <classes>
+            <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
+        </classes>
+    </test>
 </suite>
