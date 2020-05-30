@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke tests">
 
+    <parameter name="baseUri" value="https://swaggerpetstore.przyklady.javastart.pl"/>
+    <parameter name="basePath" value="v2"/>
+
     <test name="User Creation API">
         <classes>
             <class name="pl.javastart.restassured.test.tasks.UserCreationTests"/>
