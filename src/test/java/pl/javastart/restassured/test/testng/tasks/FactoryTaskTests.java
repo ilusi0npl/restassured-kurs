@@ -36,7 +36,7 @@ public class FactoryTaskTests {
     }
 
     @Test
-    public void givenPetStatusWhenPetIsCreatedThenPetWithPetStatusIsAvailableTest() {
+    public void givenPetStatusAndNameWhenPetIsCreatedThenPetWithPetStatusAndNameIsAvailableTest() {
 
         Category category = new Category();
         category.setId(1);
