@@ -39,6 +39,7 @@ public class DataProviderTaskTests {
         tag.setName("dogs-category");
 
         Pet pet = new Pet();
+        pet.setName("Burek");
         pet.setId(46465);
         pet.setCategory(category);
         pet.setPhotoUrls(Collections.singletonList("http://photos.com/dog1.jpg"));
