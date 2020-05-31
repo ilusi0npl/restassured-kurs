@@ -1,11 +1,14 @@
 package pl.javastart.restassured.test.tasks;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pl.javastart.main.pojo.user.User;
+import pl.javastart.restassured.test.testng.TestListener;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+@Listeners(TestListener.class)
 public class UserCreationTests extends TestBase {
 
     @Test
