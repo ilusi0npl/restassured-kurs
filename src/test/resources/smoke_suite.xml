@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke tests">
+
+    <test name="User Creation API">
+        <classes>
+            <class name="pl.javastart.restassured.test.tasks.UserCreationTests"/>
+        </classes>
+    </test>
+
+    <test name="User Update API">
+        <classes>
+            <class name="pl.javastart.restassured.test.tasks.UserUpdateTests"/>
+        </classes>
+    </test>
+
+</suite>

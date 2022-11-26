@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Parametrized Suite" >
+    <test name="Parametrized Test 1">
+        <parameter name="petId" value="0"/>
+        <parameter name="expectedMessage" value="Pet not found"></parameter>
+        <classes>
+            <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
+        </classes>
+    </test>
+
+    <test name="Parametrized Test 2">
+        <parameter name="petId" value="aaa"/>
+        <parameter name="expectedMessage" value="java.lang.NumberFormatException: For input string:"></parameter>
+        <classes>
+            <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
+        </classes>
+    </test>
+
+    <test name="Parametrized Test 3">
+        <parameter name="petId" value="!!!"/>
+        <parameter name="expectedMessage" value="java.lang.NumberFormatException: For input string:"></parameter>
+        <classes>
+            <class name="pl.javastart.restassured.test.testng.ParametersTests"/>
+        </classes>
+    </test>
+</suite>
